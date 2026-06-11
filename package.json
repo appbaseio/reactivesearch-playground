@@ -40,6 +40,15 @@
     "trailingComma": "es5"
   },
   "name": "@appbaseio/reactivesearch-playground",
+  "description": "A web playground which makes it easy for developers to work with Appbase.io REST API.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appbaseio/reactivesearch-playground.git"
+  },
+  "homepage": "https://github.com/appbaseio/reactivesearch-playground#readme",
+  "bugs": {
+    "url": "https://github.com/appbaseio/reactivesearch-playground/issues"
+  },
   "author": "Lakhan Samani - Muhammad Ashraf",
   "module": "dist/reactivesearch-playground.esm.js",
   "size-limit": [
