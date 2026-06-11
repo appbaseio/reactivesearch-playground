@@ -1,0 +1,20 @@
+*.log
+.DS_Store
+node_modules
+.cache
+dist
+todo.md
+
+# Secrets and local config
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+id_rsa*
+credentials.json
+secrets.*
+
+# Editor settings (may contain local credentials)
+.vscode/
