@@ -12,7 +12,7 @@ import {
 // import logger from 'redux-logger';
 import storage from 'redux-persist/lib/storage';
 
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, EnhancedStore } from '@reduxjs/toolkit';
 
 import { getPersistKey } from '../utils/functions';
 import RootReducer from './slices';
@@ -26,7 +26,10 @@ const persistConfig = {
 };
 const persistedReducer = persistReducer(persistConfig, reducers);
 
-export const store = configureStore({
+export type RootState = ReturnType<typeof persistedReducer>;
+export type AppDispatch = EnhancedStore<RootState>['dispatch'];
+
+export const store: EnhancedStore<RootState> = configureStore({
   reducer: persistedReducer,
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
@@ -36,8 +39,3 @@ export const store = configureStore({
     }),
   // .concat(logger),
 });
-
-// Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof store.getState>;
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
-export type AppDispatch = typeof store.dispatch;
