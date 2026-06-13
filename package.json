@@ -17,6 +17,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
+    "build:web": "yarn --cwd example build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",

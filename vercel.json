@@ -1,0 +1,6 @@
+{
+  "installCommand": "yarn install && yarn --cwd example install",
+  "buildCommand": "yarn build:web",
+  "outputDirectory": "example/dist",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
